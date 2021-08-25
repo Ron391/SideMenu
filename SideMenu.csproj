@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HandyControl, Version=3.2.0.0, Culture=neutral, PublicKeyToken=45be8712787a1e5b, processorArchitecture=MSIL">
+      <HintPath>packages\HandyControls.3.3.7\lib\net472\HandyControl.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -86,6 +89,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +97,41 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icons8-account-48 %281%29.png" />
+    <Resource Include="Images\icons8-account-48.png" />
+    <Resource Include="Images\icons8-comments-52 %281%29.png" />
+    <Resource Include="Images\icons8-comments-52.png" />
+    <Resource Include="Images\icons8-document-48 %281%29.png" />
+    <Resource Include="Images\icons8-document-48.png" />
+    <Resource Include="Images\icons8-export-48 %281%29.png" />
+    <Resource Include="Images\icons8-export-48.png" />
+    <Resource Include="Images\icons8-info-48 %281%29.png" />
+    <Resource Include="Images\icons8-info-48.png" />
+    <Resource Include="Images\icons8-lifebuoy-32 %281%29.png" />
+    <Resource Include="Images\icons8-lifebuoy-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-account-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-comments-52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-info-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-document-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-lifebuoy-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons8-export-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="IttCd.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

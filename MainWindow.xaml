@@ -4,9 +4,173 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SideMenu"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <hc:SideMenu BorderThickness="1" HorizontalAlignment="Left" Height="395" VerticalAlignment="Top" Width="220" Margin="0,55,0,0" BorderBrush="{x:Null}">
+            <hc:Interaction.Triggers>
+                <hc:EventTrigger EventName="SelectionChanged">
+                    <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
+                </hc:EventTrigger>
+            </hc:Interaction.Triggers>
+
+            <hc:SideMenuItem Header="Account">
+                <hc:SideMenuItem.Icon>
+                    <Image  Width="24" Height="24" Source="icons8-account-48.png"/>
+                </hc:SideMenuItem.Icon>
+                <hc:SideMenuItem Header="Summary" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf2cb;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Dashboards" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf246;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Wiki" Command="{Binding SelectCmd}" CommandParameter="{Binding Header,RelativeSource={RelativeSource Self}}">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xe82d;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="Feedback">
+                <hc:SideMenuItem.Icon>
+                    <Image  Width="24" Height="24" Source="icons8-comments-52.png"/>
+                </hc:SideMenuItem.Icon>
+                <hc:SideMenuItem Header="Work Items">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf314;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Boards">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf444;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Backlogs">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf6bf;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Sprints">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf3b0;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Queries">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf2b8;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="About">
+                <hc:SideMenuItem.Icon>
+                    <Image  Width="24" Height="24" Source="icons8-info-48.png"/>
+                </hc:SideMenuItem.Icon>
+                <hc:SideMenuItem Header="Files">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf30e;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Commits">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf293;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Pushes">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf298;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Branches">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xebc2;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Tags">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xe8ec;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Pull requests">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf296;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="Legal">
+                <hc:SideMenuItem.Icon>
+                    <Image  Width="24" Height="24" Source="icons8-document-48.png"/>
+                </hc:SideMenuItem.Icon>
+                <hc:SideMenuItem Header="Builds">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf28f;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Releases">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf3b3;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Library">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xe8f1;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Task groups">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf2ae;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Deployment groups">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf29d;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="Support">
+                <hc:SideMenuItem.Icon>
+                    <Image  Width="24" Height="24" Source="icons8-lifebuoy-32.png"/>
+                </hc:SideMenuItem.Icon>
+                <hc:SideMenuItem Header="Test Plans">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf3ab;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Runs">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xf3ac;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Load test">
+                    <hc:SideMenuItem.Icon>
+                        <TextBlock Text="&#xe8a9;" />
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="Logout">
+                <hc:SideMenuItem.Icon>
+                    <Image  Width="24" Height="24" Source="icons8-export-48.png"/>
+                </hc:SideMenuItem.Icon>
+
+            </hc:SideMenuItem>
+        </hc:SideMenu>
+        <Grid HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="220"/>
+        <TextBlock HorizontalAlignment="Left" Height="45" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" FontSize="24" FontFamily="Raleway Light"><Run Text="#"/><Run FontSize="20" Text="SIDE MENU"/></TextBlock>
+        <Grid HorizontalAlignment="Left" Height="450" Margin="220,0,0,0" VerticalAlignment="Top" Width="580" Background="Black">
+            <hc:Card Content="" HorizontalAlignment="Left" Height="135" Margin="30,30,0,0" VerticalAlignment="Top" Width="160"/>
+            <hc:Card Content="" HorizontalAlignment="Left" Height="135" Margin="216,30,0,0" VerticalAlignment="Top" Width="160"/>
+            <hc:Card Content="" HorizontalAlignment="Left" Height="135" Margin="400,30,0,0" VerticalAlignment="Top" Width="160"/>
+            <hc:Card HorizontalAlignment="Left" Height="225" Margin="30,195,0,0" VerticalAlignment="Top" Width="530">
+                <Image HorizontalAlignment="Left" Height="205" Margin="9,9,0,0" VerticalAlignment="Top" Width="510" Source="IttCd.png"/>
+            </hc:Card>
+            <TextBlock HorizontalAlignment="Left" Height="135" Margin="30,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="72" TextAlignment="Center"><Run Text="50"/><LineBreak/><Run FontSize="20" Text="Count"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="135" Margin="216,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="72" TextAlignment="Center"><Run Text="47"/><Run FontSize="24" Text="%"/><LineBreak/><Run FontSize="20" Text="Occupancy"/></TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="135" Margin="400,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" FontSize="72" TextAlignment="Center"><Run Text="65"/><LineBreak/><Run FontSize="20" Text="Average"/></TextBlock>
+        </Grid>
+
+
     </Grid>
 </Window>
